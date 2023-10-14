@@ -17,6 +17,7 @@ public class UserController {
     @Autowired
     private IUserRepository userRepository;
 
+    // http://localhost:8080/users/
     @PostMapping("/")
     public ResponseEntity<?> create(@RequestBody UserModel userModel) {
         var user = this.userRepository.findByUsername(userModel.getUsername());
